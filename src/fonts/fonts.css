@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "MuseoModerno";
+  font-style: normal;
+  font-weight: 900;
+
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("MuseoModerno"),
+       /* Если не получилось, загрузит woff2 */
+       url("MuseoModerno-Black.woff2") format("woff2"),
+       /* Если браузер не поддерживает woff2, загрузит woff */
+       url("MuseoModerno-Black.woff") format("woff");
+}
+
+@font-face {
+  font-family: "MuseoModerno";
+  font-style: normal;
+  font-weight: 800;
+  src: url("MuseoModerno-ExtraBold.woff2") format("woff2"),
+       url("MuseoModerno-ExtraBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "MuseoModerno";
+  font-style: normal;
+  font-weight: 700;
+  src: url("MuseoModerno-Bold.woff2") format("woff2"),
+       url("MuseoModerno-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "MuseoModerno";
+  font-style: normal;
+  font-weight: 600;
+  src: url("MuseoModerno-SemiBold.woff2") format("woff2"),
+       url("MuseoModerno-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "MuseoModerno";
+  font-style: normal;
+  font-weight: 500;
+  src: url("MuseoModerno-Medium.woff2") format("woff2"),
+       url("MuseoModerno-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "MuseoModerno";
+  font-style: normal;
+  font-weight: 400;
+  src: url("MuseoModerno-Regular.woff2") format("woff2"),
+       url("MuseoModerno-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "MuseoModerno";
+  font-style: normal;
+  font-weight: 300;
+  src: url("MuseoModerno-Light.woff2") format("woff2"),
+       url("MuseoModerno-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "MuseoModerno";
+  font-style: normal;
+  font-weight: 200;
+  src: url("MuseoModerno-ExtraLight.woff2") format("woff2"),
+       url("MuseoModerno-ExtraLight.woff") format("woff");
+}
+
+@font-face {
+  font-family: "MuseoModerno";
+  font-style: normal;
+  font-weight: 100;
+  src: url("MuseoModerno-Thin.woff2") format("woff2"),
+       url("MuseoModerno-Thin.woff") format("woff");
+}
