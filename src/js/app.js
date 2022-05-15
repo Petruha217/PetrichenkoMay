@@ -1,3 +1,4 @@
-import { daf } from './modules/header.js';
+import { slider } from './modules/slider.js';
 
-daf();
+
+slider(".slider__window", ".slider__list", ".slider__item", ".slider__arow_left", ".slider__arow");
