@@ -1,19 +1,35 @@
-export const slider = (windowSlider, listSlider, itemSlider, backGo, frontGo) => {
-    document.querySelector(frontGo).addEventListener('click', front);
-    document.querySelector(backGo).addEventListener('click', back);
+
+export const slider = (windowSlider, listSlider, prev, next, t) => {
+    document.querySelector(next).addEventListener('click', front);
+    document.querySelector(prev).addEventListener('click', back);
     const window = document.querySelector(windowSlider);
     const widthWindow = +getComputedStyle(window).width.match(/\d/g).join('');
-    const list = document.querySelector(listSlider);
-    const items = document.querySelectorAll(itemSlider).length;
-    let trans = 0;
+    
+
     function front() {
-        trans = trans > (- widthWindow) * (items - 1) ? trans - widthWindow : 0;
-        console.log(trans);
-        list.style.transform = `translateX(${trans}px)`;
+        const list = document.querySelector(listSlider);
+        list.style.transition = `${t}ms All`;
+        list.style.transform = `translateX(-${widthWindow}px)`;
+        setTimeout(() => {
+            const start = list.firstElementChild;
+            const newStart = start.cloneNode(true);
+            list.append(newStart);
+            start.remove();
+            list.style.transition = '';
+            list.style.transform = 'translateX(0px)';
+        }, t); 
     }
+
     function back() {
-        trans = trans >= (- widthWindow) * (items - 1) && trans < 0 ? trans + widthWindow : (- widthWindow) * (items - 1);
-        console.log(trans);
-        list.style.transform = `translateX(${trans}px)`;
+        const list = document.querySelector(listSlider);
+        const end = list.lastElementChild;
+        const newEnd = end.cloneNode(true);
+        list.prepend(newEnd);
+        end.remove();
+        list.style.transform = `translateX(-${widthWindow}px)`;
+        getComputedStyle(list).transform;
+        list.style.transition = `${t}ms All`;
+        list.style.transform = 'translateX(0px)';
+        setTimeout(() => { list.style.transition = '' }, t); 
     }
 }

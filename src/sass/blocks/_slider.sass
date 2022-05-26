@@ -3,17 +3,19 @@
     .container
         position: relative
     &__window
+        position: relative
         margin: 0 auto
         width: 750px
         height: 527px
         overflow: hidden
     &__list
+        position: absolute
+        left: 0
         width: 2250px
         margin: 0
         padding: 0
         list-style-type: none
         display: flex
-        transition: 0.3s all
     &__item
         margin: 0
         padding: 0
@@ -29,6 +31,7 @@
         border-top: 10px solid $col-red
         border-right: 10px solid $col-red
         transform: rotate(45deg)
+        z-index: 2
         &_left
             left: 0
             transform: rotate(-135deg)
